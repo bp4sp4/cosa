@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+</head>
+<body>
+
+<div id="box2" style="width: 100px; height: 50px; text-align: center; float: right;">
+    <button type="button">
+        <a href="../notice/nwrite.html">공지작성</a></button>
+</div>
+
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+    }
+    h1{
+      font-size: 52px;
+      width: 250px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+    table{
+      margin: 0 auto;
+      margin-top: 30px;
+      width: 1200px;
+      border-collapse: collapse;
+
+    }
+    table,td{
+     text-align: center;
+    }
+    td:nth-child(1){
+      /*선택*/
+      width: 80px;
+    }
+    td:nth-child(2){
+      /*순번*/
+      width: 80px;
+    }
+    td:nth-child(4){
+      /*작성자*/
+      width: 120px;
+    }
+    td:nth-child(5){
+      /*작성일*/
+      width: 150px;
+    }
+    td:nth-child(6){
+      /*조회수*/
+      width: 70px;
+    }
+    tr:nth-child(n+2):nth-child(-n+9){
+      border-bottom: 1px solid rgb(173, 173, 173);
+      height: 50px;
+    }
+    tr:first-child{
+      background-color: #1459FC;
+      border-bottom: 1.5px solid #87a9cd;
+      border-top: 2.5px solid #87a9cd;
+      height: 50px;
+    }
+      #selectnotice
+    {
+      width: 15px;
+      height: 15px;
+      zoom: 1.2;
+      margin-left: 6px;
+      margin-top: 4px;
+    }
+    #search{
+      margin:  0 auto;
+      margin-top: 15px;
+      width: 1200px;
+      height: 80px;
+      border: 3px solid rgb(233, 233, 233);
+    }
+    #search > input{
+      margin-top: 20px;
+      border: 1px solid rgb(173, 173, 173);
+      height: 35px;
+    }
+    #search > input:first-child{
+      margin-left: 60px;
+    }
+    select{
+      width: 70px;
+      height: 35px;
+    }
+    #s1{
+      margin-left: 70px;
+    }
+    #text{
+      width: 400px;
+    }
+    #submit{
+      width: 70px;
+      height: 35px;
+      background-color: rgb(69, 67, 73);
+      color: white;
+      border: none;
+    }
+    #paging{
+
+      width: 250px;
+      margin: 0 auto;
+      margin-top: 25px;
+    }
+    .hbody {
+        width: 100%;
+        height: 100px;
+    }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  font-size: 2em;
+}
+
+
+</style>
+
+
+<body>
+  <section class="hbody">
+    <article class="nav">
+    <div class="title"><a href="../../../templates/pmain.html" style="color:black">Cosa</a></div>
+        </article>
+  </section>
+<h1>공지사항</h1>
+<form action="호출 api" method="post" id="search">
+    <tr>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp작성일</tr>
+    <input type="date" name="startdate" id="startdate">-
+    <input type="date" name="enddate" id="enddate">
+    <select name="s1" id="s1">
+        <option value="test1">&nbsp작성자</option>
+        <option value="test1">제목</option>
+    </select>
+    <input type="text" name="text" id="text">
+    <button id="submit">검색</button>
+
+
+</form>
+<div id="noticelist">
+    <table >
+        <tr>
+            <td style="color:white">선택</td>
+            <td style="color:white">순번</td>
+            <td style="color:white">제목</td>
+            <td style="color:white">작성자</td>
+            <td style="color:white">작성일</td>
+            <td style="color:white">조회수</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="selectn" id="selectn1"></td>
+            <td>2</td>
+            <td style="text-align: left;">세번째 정보 : 재원위중증현황</td>
+            <td>홍길동</td>
+            <td>2022.07.20</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="selectn" id="selectn2"></td>
+            <td>3</td>
+            <td style="text-align: left;">두번째 정보 : 사망현황</td>
+            <td>이순신</td>
+            <td>2022.07.19</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="selectn" id="selectn3"></td>
+            <td>4</td>
+            <td style="text-align: left;">첫번째 정보 : 국내발생현황</td>
+            <td>장보고</td>
+            <td>2022.07.19</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="selectn" id="selectn4"></td>
+            <td>5</td>
+            <td style="text-align: left;">코사 사이트 이용 방법</td>
+            <td>신사임당</td>
+            <td>2022.07.18</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="selectn" id="selectn5"></td>
+            <td>6</td>
+            <td style="text-align: left;">코사 사이트가 만들어진 이유</td>
+            <td>지코</td>
+            <td>2022.07.18</td>
+            <td>154</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="selectnotice" id="selectnotice"></td>
+            <td>7</td>
+            <td style="text-align: left;">코사 이용관련 공지 내용</td>
+            <td>아이유</td>
+            <td>2022.07.18</td>
+            <td>64</td>
+        </tr>
+    </table>
+
+    <div id="paging">
+        <a href="#&amp;date= 00:00:00&amp;" class="_paging pre nclicks(air.next)">이전</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#&amp;date= 00:00:00&amp;" class="_paging next nclicks(air.next)">다음</a>
+    </div>
+</div>
+
+</body>
+</html>

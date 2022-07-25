@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 페이지</title>
+</head>
+
+<body>
+    <style>
+        input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #1459FC;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #1459FC;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+
+    </style>
+</body>
+
+<body>
+
+<br><br>
+<h1>회원가입 페이지</h1>
+<br><br>
+<div class="container">
+    <label for="uid"><b>아이디</b></label><br>
+    <input type="text" placeholder="사용할 아이디" name="uid" required>
+    <br><br>
+
+    <label for="psw"><b>비밀번호</b></label><br>
+    <input type="password" placeholder="기존 비밀번호" name="psw" required>
+    <br><br>
+
+    <label for="psw2"><b>비밀번호 확인</b></label><br>
+    <input type="password" placeholder="비밀번호 재입력" name="psw2" required>
+    <br><br>
+
+
+    <label for="uname"><b>이름</b></label><br>
+    <input type="text" placeholder="이름" name="uname" required>
+    <br><br>
+
+
+    <label for="mail"><b>이메일</b></label><br>
+    <input type="text" placeholder="이메일 입력" name="email" required>
+    <br><br>
+
+    <label for="phone"><b>전화번호</b></label><br>
+    <input type="text" placeholder="전화번호 입력" name="phone" required>
+    <br><br>
+
+    <button type="submit"><a href="jmain.html" style="color:white">회원가입</a></button>
+    <br><br>
+</div>
+
+
+</form>
+
+</body>
+</html>
